@@ -1,32 +1,92 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 
 const Header = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  
+  // Function to toggle the sidebar's visibility
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   return (
-    <div>
-       <div className='flex items-center justify-between sm:max-w-lg lg:max-w-4xl sm:mx-auto '>
-      <div>
-       <div></div>
-        <h1> Menu</h1> 
-      </div>
-      <div>
-      <img src="https://assets.inshorts.com/website_assets/images/logo_inshorts.png" className="w-36 cursor-pointer" alt="Inshorts" />
-      </div>
-      </div> 
-      <div className='max-w- lg:max-w-5xl  sm:mx-auto '>
-        <div className='bg-red-500 py-3 px-5 flex justify-evenly items-center space-x-4'>
-          <h1 className='text-white'>For the best experience use <span className='font-semibold cursor-pointer'>inshorts</span> app on your smartphone</h1>
-          <div className='sm:flex justify-between sm:space-x-3 space-y-3 sm:space-y-0'>
-          <img className="cursor-pointer" src="https://assets.inshorts.com/website_assets/images/appstore.png" height="52" width="140" alt="inshorts"></img>
-          <img className="cursor-pointer" src="https://assets.inshorts.com/website_assets/images/playstore.png" height="52" width="140" alt="inshorts"></img>
+    <div className="">
+      {/* Top section with logo and menu button */}
+      <div className="flex items-center justify-between mx-2 sm:mx-10 border mb-2 sm:mb-5 border-b-gray-200 px-2 sm:px-4 border-b-4">
+        {/* Menu and Sidebar */}
+        <div>
+          {/* Menu Button */}
+          <button onClick={toggleSidebar} className="menuButton rounded">
+            Menu
+          </button>
+
+          {/* Sidebar */}
+          <div className={`sidebar ${isSidebarOpen ? "active" : ""}`}>
+            <div className="header">
+              <button onClick={toggleSidebar} className="closeButton">
+                Close
+              </button>
+              <div className="languageToggle space-x-3">
+                <button>English</button>
+                <button>हिन्दी</button>
+              </div>
+            </div>
+            <ul className="menu">
+              <li>India</li>
+              <li>Business</li>
+              <li>Politics</li>
+              <li>Sports</li>
+              <li>Technology</li>
+              <li>Startups</li>
+              <li>Entertainment</li>
+              <li>Hatke</li>
+              <li>International</li>
+              <li>Automobile</li>
+              <li>Science</li>
+              <li>Travel</li>
+              <li>Miscellaneous</li>
+              <li>Fashion</li>
+            </ul>
           </div>
         </div>
-    </div>
-    </div>
-  )
-}
 
-export default Header
+        {/* Logo */}
+        <div>
+          <img
+            src="https://assets.inshorts.com/website_assets/images/logo_inshorts.png"
+            className="w-36 cursor-pointer"
+            alt="Inshorts"
+          />
+        </div>
+        <hr  className=''/>
+      </div>
+
+      {/* Bottom section with app suggestion banner */}
+      <div className="max-w-lg lg:max-w-5xl sm:mx-auto px-2 rounded  mb-2 sm:mb-5">
+        <div className="bg-red-500 py-3 px-5 flex justify-evenly items-center space-x-4">
+          <h1 className="text-white">
+            For the best experience use <span className="font-semibold cursor-pointer">inshorts</span> app on your smartphone
+          </h1>
+          <div className="sm:flex justify-between sm:space-x-3 space-y-3 sm:space-y-0">
+            <img
+              className="cursor-pointer"
+              src="https://assets.inshorts.com/website_assets/images/appstore.png"
+              height="52"
+              width="140"
+              alt="inshorts"
+            />
+            <img
+              className="cursor-pointer"
+              src="https://assets.inshorts.com/website_assets/images/playstore.png"
+              height="52"
+              width="140"
+              alt="inshorts"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Header;

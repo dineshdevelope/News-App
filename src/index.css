@@ -7,14 +7,6 @@ body {
 }
 
 /* Style for the Menu Button */
-.menuButton {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-}
-
 /* Sidebar styling */
 .sidebar {
     position: fixed;
@@ -26,46 +18,60 @@ body {
     color: white;
     transition: left 0.3s;
     padding-top: 20px;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
+    z-index: 100; /* Ensure sidebar is above other elements */
+  }
+  
+  /* Style for the menu button */
+  .menuButton {
+    background-color: rgba(241, 226, 226, 0.897);
+    color:black;
     padding: 10px;
-}
-
-.languageToggle button {
-    color: white;
-    background: none;
     border: none;
     cursor: pointer;
-    font-size: 14px;
-}
-
-.closeButton {
+  }
+  
+  /* Style for the close button */
+  .closeButton {
     background-color: #ff3b3b;
     color: white;
     border: none;
     padding: 5px;
     cursor: pointer;
-}
-
-.menu {
+  }
+  
+  /* Toggle sidebar visibility */
+  .sidebar.active {
+    left: 0;
+  }
+  
+  /* Sidebar header styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  /* Language toggle styling */
+  .languageToggle button {
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .menu {
     list-style-type: none;
     padding: 0;
-}
-
-.menu li {
+  }
+  
+  .menu li {
     padding: 15px;
     border-bottom: 1px solid #444;
     cursor: pointer;
-}
-
-.menu li:hover {
+  }
+  
+  .menu li:hover {
     background-color: #555;
-}
-
-/* Show sidebar when active */
-.sidebar.active {
-    left: 0;
-}
+  }
+  

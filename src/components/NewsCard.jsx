@@ -49,7 +49,7 @@ const NewsCard = () => {
         <p className='font-light text-gray-700'>
          {item.description}
         </p>
-        <h1 className='font-semibold text-gray-800 cursor-pointer pb-1'>read more at News 18</h1>
+        <h1 className='font-light text-gray-800 cursor-pointer pb-1'>read more at <a className='font-semibold' target='_blank' href={item.url}>{item.source.name}</a></h1>
       </div>
     </div>
         )
