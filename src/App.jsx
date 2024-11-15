@@ -1,5 +1,6 @@
 import Header from "./components/Header"
 import NewsCard from "./components/NewsCard"
+import Sidebar from "./components/Sidebar"
 
 
 function App() {
@@ -7,8 +8,9 @@ function App() {
 
   return (
     <>
-    <Header />
-    <NewsCard />
+     {/*  <Sidebar />   */}
+      <Header  /> 
+       <NewsCard />   
     </>
   )
 }

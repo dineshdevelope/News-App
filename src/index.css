@@ -1,3 +1,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the Menu Button */
+.menuButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    position: fixed;
+    left: -300px; /* Hidden by default */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s;
+    padding-top: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.languageToggle button {
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.closeButton {
+    background-color: #ff3b3b;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #555;
+}
+
+/* Show sidebar when active */
+.sidebar.active {
+    left: 0;
+}
