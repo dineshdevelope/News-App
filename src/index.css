@@ -54,7 +54,7 @@ body {
   /* Language toggle styling */
   .languageToggle button {
     color: white;
-    background: none;
+    background: gray;
     border: none;
     cursor: pointer;
     font-size: 14px;

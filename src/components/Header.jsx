@@ -23,13 +23,14 @@ const Header = () => {
           {/* Sidebar */}
           <div className={`sidebar ${isSidebarOpen ? "active" : ""}`}>
             <div className="header">
-              <button onClick={toggleSidebar} className="closeButton">
+              
+              <div className="languageToggle space-x-3">
+                <button className='p-2 rounded'>English</button>
+                <button className='p-2 rounded'>हिन्दी</button>
+              </div>
+              <button onClick={toggleSidebar} className="closeButton rounded ">
                 Close
               </button>
-              <div className="languageToggle space-x-3">
-                <button>English</button>
-                <button>हिन्दी</button>
-              </div>
             </div>
             <ul className="menu">
               <li onClick={toggleSidebar}>India</li>
@@ -52,11 +53,13 @@ const Header = () => {
 
         {/* Logo */}
         <div>
+          <a href="https://www.inshorts.com/">
           <img
             src="https://assets.inshorts.com/website_assets/images/logo_inshorts.png"
             className="w-36 cursor-pointer"
             alt="Inshorts"
           />
+          </a>
         </div>
         <hr  className=''/>
       </div>
