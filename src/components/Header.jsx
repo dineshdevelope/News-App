@@ -33,7 +33,10 @@ const Header = () => {
               </button>
             </div>
             <ul className="menu">
-              <li onClick={toggleSidebar}>India</li>
+              <li onClick={()=>{
+                toggleSidebar()
+                
+              }}>India</li>
               <li onClick={toggleSidebar}>Business</li>
               <li onClick={toggleSidebar}>Politics</li>
               <li onClick={toggleSidebar}>Sports</li>
@@ -71,13 +74,14 @@ const Header = () => {
             For the best experience use <span className="font-semibold cursor-pointer">inshorts</span> app on your smartphone
           </h1>
           <div className="sm:flex justify-between sm:space-x-3 space-y-3 sm:space-y-0">
-            <img
+            <a href="https://www.inshorts.com/?shortlink=Website&pid=Website&af_xp=custom&source_caller=ui" target='_blank'><img
               className="cursor-pointer"
               src="https://assets.inshorts.com/website_assets/images/appstore.png"
               height="52"
               width="140"
               alt="inshorts"
-            />
+            /></a>
+            <a href="https://www.inshorts.com/?shortlink=Website&pid=Website&af_xp=custom&source_caller=ui" target='_blank'>
             <img
               className="cursor-pointer"
               src="https://assets.inshorts.com/website_assets/images/playstore.png"
@@ -85,6 +89,7 @@ const Header = () => {
               width="140"
               alt="inshorts"
             />
+            </a>
           </div>
         </div>
       </div>

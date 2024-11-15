@@ -14,7 +14,7 @@ const NewsCard = () => {
       const response=await axios.get(BASE_URL,{
         params:{
           apiKey:API_KEY,
-          category:"general",
+          ategorcy:"general",
           country:'us'
         }
       })
@@ -41,7 +41,9 @@ const NewsCard = () => {
         return(
           <div className=' border-gray-200   border-4 space-y-2 sm:max-w-lg lg:max-w-4xl sm:mx-auto lg:flex mb-5' key={index}>
       <div className='mx-2 '>
+        <div className='lg:w-96'>
         <img src={item.urlToImage  || 'https://png.pngtree.com/png-clipart/20211009/original/pngtree-404-not-found-mdern-transparent-background-png-image_6839517.png' } alt="NewsImage" className='w-full border border-amber-60  rounded pt-2 object-cover ' />
+        </div>
       </div>
       <div className='mx-2 space-y-1'>
         <p className='font-light text-xl text-gray-700  cursor-pointer'>{item.title}</p>
@@ -49,7 +51,7 @@ const NewsCard = () => {
         <p className='font-light text-gray-700'>
          {item.description}
         </p>
-        <h1 className='font-light text-gray-800 cursor-pointer pb-1'>read more at <a className='font-semibold' target='_blank' href={item.url}>{item.source.name}</a></h1>
+        <h1 className='font-light text-gray-800 cursor-pointer pb-1 '>read more at <a className='font-semibold' target='_blank' href={item.url}>{item.source.name}</a></h1>
       </div>
     </div>
         )
