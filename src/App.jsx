@@ -1,3 +1,5 @@
+import Header from "./components/Header"
+import NewsCard from "./components/NewsCard"
 
 
 function App() {
@@ -5,7 +7,8 @@ function App() {
 
   return (
     <>
-    
+    <Header />
+    <NewsCard />
     </>
   )
 }
