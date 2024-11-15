@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <div className="">
       {/* Top section with logo and menu button */}
-      <div className="flex items-center justify-between mx-2 sm:mx-10 border mb-2 sm:mb-5 border-b-gray-200 px-2 sm:px-4 border-b-4">
+      <div className="flex items-center justify-between mx-2 sm:mx-10 border mb-2 sm:mb-5 border-b-gray-200 px-2 sm:px-4 border-b-4 ">
         {/* Menu and Sidebar */}
         <div>
           {/* Menu Button */}
@@ -32,20 +32,20 @@ const Header = () => {
               </div>
             </div>
             <ul className="menu">
-              <li>India</li>
-              <li>Business</li>
-              <li>Politics</li>
-              <li>Sports</li>
-              <li>Technology</li>
-              <li>Startups</li>
-              <li>Entertainment</li>
-              <li>Hatke</li>
-              <li>International</li>
-              <li>Automobile</li>
-              <li>Science</li>
-              <li>Travel</li>
-              <li>Miscellaneous</li>
-              <li>Fashion</li>
+              <li onClick={toggleSidebar}>India</li>
+              <li onClick={toggleSidebar}>Business</li>
+              <li onClick={toggleSidebar}>Politics</li>
+              <li onClick={toggleSidebar}>Sports</li>
+              <li onClick={toggleSidebar}>Technology</li>
+              <li onClick={toggleSidebar}>Startups</li>
+              <li onClick={toggleSidebar}>Entertainment</li>
+              <li onClick={toggleSidebar}>Hatke</li>
+              <li onClick={toggleSidebar}>International</li>
+              <li onClick={toggleSidebar}>Automobile</li>
+              <li onClick={toggleSidebar}>Science</li>
+              <li onClick={toggleSidebar}>Travel</li>
+              <li onClick={toggleSidebar}>Miscellaneous</li>
+              <li onClick={toggleSidebar}>Fashion</li>
             </ul>
           </div>
         </div>
