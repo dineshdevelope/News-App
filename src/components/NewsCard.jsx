@@ -3,9 +3,7 @@ import axios from 'axios';
 import dotenv from "dotenv"
 
 
-/* const API_KEY = 'c1e4a0c496c540e0931580178efd9c90'; */
 const API_KEY = import.meta.env.VITE_API_KEY;
-
 
 const BASE_URL = 'https://newsapi.org/v2/top-headlines';
 
@@ -25,7 +23,6 @@ const NewsCard = ({ category }) => {
       setNewsData(response.data.articles);
       //console.log(category);
       //console.log(response.data.articles);
-      
       
     } catch (err) {
       console.error('Error fetching news:', err);
@@ -81,7 +78,7 @@ const NewsCard = ({ category }) => {
             </div>
           </div>
         ))
-      )}
+      )}   
     </div>
   );
 };

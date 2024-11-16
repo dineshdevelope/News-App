@@ -1,4 +1,5 @@
 import React from 'react'
+import toast from 'react-hot-toast';
 
 const Footer = () => {
   return (
@@ -15,7 +16,76 @@ const Footer = () => {
             </div>
             </div>
             <div className='text-sm'>
-                <h1 className='py-2'>Contact Us</h1>
+                <h1 className='py-2' onClick={()=>{
+                 toast.custom((t) => (
+                  <div
+                    className={`${
+                      t.visible ? 'animate-enter' : 'animate-leave'
+                    } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
+                  >
+                    <div className="flex-1 w-0 p-4">
+                      <div className="flex items-start">
+                        <div className="flex-shrink-0 pt-0.5">
+                          
+                        </div>
+                        <div className="ml-3 space-y-3">
+                          <div>
+                          <a className="text-sm  text-white  cursor-pointer bg-gray-500 p-1 hover:bg-green-600 rounded" href='mailto:careers@inshorts.com' target='_blank'>
+                            CONTACT HIRING TEAM
+                          </a>
+                          <br/>
+                          </div>
+                          <div>
+                          <a className="text-sm  text-white  cursor-pointer bg-gray-500 p-1 hover:bg-green-600 rounded" href='mailto:Admin@inshorts.com' target='_blank'>
+                            CONTACT ADMIN TEAM
+                          </a>
+                          <br/>
+                          </div>
+                          <div>
+                          <a className="text-sm  text-white  cursor-pointer bg-gray-500 p-1 hover:bg-green-600 rounded" href='mailto:Marketing@inshorts.com' target='_blank'>
+                            CONTACT MARKITING TEAM
+                          </a>
+                           <br/>
+                          </div>
+                           <div>
+                           <a className="text-sm  text-white  cursor-pointer bg-gray-500 p-1 hover:bg-green-600 rounded" href='mailto:Editorial@inshorts.com' target='_blank'>
+                            CONTACT EDITORIAL TEAM
+                          </a>
+                          <br/>
+                           </div>
+                         <div>
+                         <a className="text-sm  text-white  cursor-pointer bg-gray-500 p-1 hover:bg-green-600 rounded" href='mailto:Sales@inshorts.com' target='_blank'>
+                            CONTACT SALES TEAM
+                          </a>
+                          <br/>
+                         </div>
+                         <div>
+                         <a className="text-sm  text-white  cursor-pointer bg-gray-500 p-1 hover:bg-green-600 rounded" href='mailto:Contact@inshorts.com' target='_blank'>
+                            CONTACT FOR ANY OTHER
+                          </a>
+                           <br/>
+                         </div>
+                           <div>
+                           <a className="text-sm  text-white  cursor-pointer bg-gray-500 p-1 hover:bg-green-600 rounded" href='https://www.inshorts.com/contact-us' target='_blank'>
+                            CONTACT FOR ANY ACCOUNT
+                          </a>
+                           <br/>
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex border-l border-gray-200">
+                      <button
+                        onClick={() => toast.dismiss(t.id)}
+                        className="w-full border border-transparent rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                ))
+                
+                }}>Contact Us</h1>
                 <p  className='cursor-pointer'><a href="https://www.inshorts.com/tnc" target='_blank'>Terms & conditions</a></p>
                 <p  className='cursor-pointer'><a href="https://www.inshorts.com/tnc" target='_blank'>Privacy Policies</a></p>
             </div>
