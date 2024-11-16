@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div>
       <Header onCategoryChange={handleCategoryChange} />
-       <NewsCard category={category} /> 
+        <NewsCard category={category} />  
       <Footer />
     </div>
   );
